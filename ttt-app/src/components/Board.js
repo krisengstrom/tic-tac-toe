@@ -1,22 +1,15 @@
 import React from 'react';
 
 class App extends React.Component {
-  
-  	constructor(props) {
+
+	constructor(props) {
 		super(props);
 		
+		let coords = new Array(9).fill().map((e,i) => {
+			return {id: i+1, player: null}
+		});
 		this.state = {
-			coords: [
-				{id: 1, player: null},
-				{id: 2, player: null},
-				{id: 3, player: null},
-				{id: 4, player: null},
-				{id: 5, player: null},
-				{id: 6, player: null},
-				{id: 7, player: null},
-				{id: 8, player: null},
-				{id: 9, player: null}
-			],
+			coords: coords,
 			currentPlayer: 'X',
 			winner: null
 		}
